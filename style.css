@@ -1,0 +1,318 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html, body {
+overscroll-behavior: none;
+}
+
+body{
+  color: white;
+  background: linear-gradient(315deg, #130f40 0%, #000000 74%) no-repeat center bottom fixed;
+  font-family: serif;
+}
+
+#output,#rep0,#ia,#bb>#smt0,#bb>#smt,#bb>#smt1,#R,#hc,#rx1,#rx,#inp,#p,#m,form{display: none;}
+
+/*#k{display: block!important;}*/
+
+#name0, #pas{
+ width: 60vw;
+ height: 10vw;
+ outline: none;
+ border: 1.5px solid navy;
+ border-radius: 10px;
+ font-size: 6vw;
+ font-weight: bold;
+ padding-left: 3vw;
+ background: ghostwhite;
+}
+
+#pas{
+ margin-left: 2vw;
+}
+
+label{
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+#name0::placeholder {
+  color: green;
+}
+
+#pas::placeholder {
+  color: #ff3333;
+}
+
+#rep0 {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+}
+
+#rep{
+  width: 90vw;
+  padding: 10vw 2vw;
+  position: fixed;
+  top: 50vw;
+  left: 5vw;
+  color: black;
+  background: gold;
+  font-size: 7.5vw;
+  font-weight: bold;
+  box-shadow: 1px 1px 15px white;
+}
+
+center{
+  margin-bottom: 5vw;
+}
+
+#ten-countdown{
+  color: black;
+  margin: 2vw 0 0 20vw;
+}
+
+#hp{
+  width: 100vw;
+  height: 1vh;
+  background: linear-gradient(315deg, #130f40 0%, #000000 74%) no-repeat center bottom fixed;
+  /*background: linear-gradient(to top, #dfe9f3 0%, white 100%);*/
+}
+
+#hpb{
+position: relative;
+top: 20vw;
+margin-left: 2vw;
+}
+
+#hp>#hpb>button{
+  width: 75vw;
+  height: auto;
+  color: #fff !important;
+  border: none;
+  border-radius: 1vw;
+  margin-left: 10vw;
+  margin-bottom: 5%;
+  padding: 2vw 4vw;
+  font-size: 9vw;
+  font-family: serif;
+  font-weight: 500;
+  background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%)!important;
+  cursor: pointer;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1),4px 4px 5px 0px rgba(0,0,0,.1)!important;
+  outline: none;
+}
+
+#X1{
+  display: block;
+}
+
+#bb{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background: black;
+  z-index: 9999999999;
+  padding-top: 2vw;
+}
+
+#bb>#pr,#page{
+  display: none;
+}
+
+#bar{
+  display: inline;
+}
+
+#bar>input{
+  width: 70vw;
+  height: 20vw;
+  background-color: ghostwhite;
+  margin-left: 2vw;
+  padding-left: 4vw;
+  font-weight: bold;
+  font-size: 7vw;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background: whitesmoke;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .6);
+}
+
+#bar>input::placeholder{
+   color: darkblue;
+}
+
+#bar button{
+  position: relative;
+  float: right;
+  top: 2vw;
+  color: black;
+  font-size: 7vw;
+  font-weight: 900;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 4vw 6vw 4vw 6vw;
+  margin-right: 3vw;
+  background-color: whitesmoke;
+  text-shadow: 1.4px 1.7px #d9d9d9;
+  box-shadow: inset 3px 3px 4px rgba(255, 255, 255, .6),
+    inset -3px -3px 4px rgba(0, 0, 0, .6);
+}
+
+#bar button:active{
+  box-shadow: inset -3px -3px 4px rgba(255, 255, 255, .6),
+    inset 3px 3px 4px rgba(0, 0, 0, .6);
+}
+
+#top{
+  width: 100vw;
+  height: auto;
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  padding: 0 7vw 3vw 1vw;
+  background: ghostwhite;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .6);
+}
+
+h1:nth-child(3) {
+  color: black;
+  font-size: 7vw;
+  margin-top: 2.5vw;
+  margin-left: 5vw;
+}
+
+#mnb{
+   width: 100%;
+   height: 50vw;
+   background:linear-gradient(315deg, #130f40 0%, #000000 74%);
+   overflow: scroll;
+   padding: 2vw 0 2vw 5vw;
+   margin-top: 2vw;
+}
+
+#mnb>p{
+  width: 10vw;
+  height: 10vw;
+  display: inline-block;
+  text-align: center;
+  font-size: 6vw;
+  color: black;
+  font-weight: bold;
+  background: ghostwhite;
+  border: 1px solid green;
+  padding: 1.5vw 1.5vw;
+  margin-bottom: 2vw;
+  margin-right: 1.5vw;
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+  inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+::-webkit-scrollbar {
+  width: 5vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 5px;
+}
+
+form{
+  position: relative;
+  margin-bottom: 8vw;
+  font-size: 6vw;
+  left:-50%;
+  transition:1s;
+  transform:translateX(50%);
+}
+
+form > p{
+  margin-top: 5vw;
+  font-weight: 500;
+  margin-left: 4vw;
+}
+
+#s1,
+#s0{
+  color: black;
+  text-shadow: 1px 1px 1px ghostwhite;
+}
+
+#bb>button{
+  position: relative;
+  left: 7vw;
+  margin-right: 5vw;
+  color: black;
+  font-size: 8vw;
+  font-weight: 900;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  display: inline-block;
+  padding: 3vw 3vw 4vw 3vw;
+  background-color: whitesmoke;
+  text-shadow: 1.4px 1.7px #d9d9d9;
+  box-shadow: inset 3px 3px 4px rgba(255, 255, 255, .6),
+  inset -3px -3px 4px rgba(0, 0, 0, .6);
+}
+
+#bb>button:active{
+  box-shadow: inset -3px -3px 4px rgba(255, 255, 255, .6),
+    inset 3px 3px 4px rgba(0, 0, 0, .6);
+}
+
+form>input[type="radio"]{
+  position: relative;
+  top:2vw;
+  width: 7vw;
+  height: 7vw;
+  accent-color: red;
+  margin-left: 7vw;
+  margin-top:1vw;
+}
+
+#hp>#hpb>input[type="radio"]{
+  position: relative;
+  top: 2vw;
+  width: 7vw;
+  height: 7vw;
+  accent-color: magenta;
+  margin-left: 10vw;
+  margin-top: 1vw;
+}
+
+.R1, .R{
+  position: relative;
+  font-weight: 600;
+  width: 80%;
+  display: inline-flex;
+  flex-direction: row;
+  left: 3vw;
+  margin-top: 3.5vw;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  padding: 1vw 2vw 1vw 3vw;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .6),inset 1px 1px 3px rgba(0, 0, 0, .6);
+}
+
+#Dark,#Light{
+  font-size: 5vw;
+  font-weight: bold;
+}
